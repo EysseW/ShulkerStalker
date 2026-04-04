@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "shulker-stalker",
 	"version": "${version}",
 	"name": "Shulker Stalker",
 	"description": "Warns the user when they leave their shulkerbox unattended!",
@@ -16,7 +16,7 @@
 		"discord": "https://discord.gg/SrdqrsmscM"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/shulker-stalker/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -27,9 +27,9 @@
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"shulker-stalker.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "shulker-stalker.client.mixins.json",
 			"environment": "client"
 		}
 	],

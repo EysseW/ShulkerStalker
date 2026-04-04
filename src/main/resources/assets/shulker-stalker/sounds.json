@@ -1,0 +1,11 @@
+{
+  "shulker_warning": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "shulker-stalker:warning",
+        "stream": false
+      }
+    ]
+  }
+}

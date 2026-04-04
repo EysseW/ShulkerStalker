@@ -2,8 +2,10 @@ package games.swip.ShulkerStalker;
 
 import games.swip.ShulkerStalker.config.Config;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +34,9 @@ public class ShulkerBoxCounter {
 			// NOTIFY PLAYER
 			if (client.player != null && Config.enabled) {
 				client.player.sendOverlayMessage(Component.literal("§cWarning: Shulker box not picked up!"));
-				System.out.println("Timer done!");
+				if (Config.warning_sound) {
+					client.player.playSound(ShulkerStalkerClient.SHULKER_WARNING_EVENT);
+				}
 			}
 			return true;
 		}
