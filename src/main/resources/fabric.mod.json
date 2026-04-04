@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "modid",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Shulker Stalker",
+	"description": "Warns the user when they leave their shulkerbox unattended!",
 	"authors": [
 		"πrat"
 	],
