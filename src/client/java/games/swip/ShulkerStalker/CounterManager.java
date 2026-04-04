@@ -1,4 +1,4 @@
-package games.swip.SkulkerBox;
+package games.swip.ShulkerStalker;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.Minecraft;

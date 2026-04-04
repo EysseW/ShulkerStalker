@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "games.swip.SkulkerBox.mixin.client",
+	"package": "games.swip.ShulkerStalker.mixin.client",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
 		"BlockMineMixin",

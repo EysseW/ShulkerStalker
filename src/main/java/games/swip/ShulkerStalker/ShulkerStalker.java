@@ -1,11 +1,11 @@
-package games.swip.SkulkerBox;
+package games.swip.ShulkerStalker;
 
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SkulkerBox implements ModInitializer {
+public class ShulkerStalker implements ModInitializer {
 	public static final String MOD_ID = "modid";
 
 	// This logger is used to write text to the console and the log file.

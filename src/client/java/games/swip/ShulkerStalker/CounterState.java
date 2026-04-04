@@ -1,4 +1,4 @@
-package games.swip.SkulkerBox;
+package games.swip.ShulkerStalker;
 
 public enum CounterState {
 	WAITING,

@@ -1,7 +1,6 @@
-package games.swip.SkulkerBox.mixin.client;
+package games.swip.ShulkerStalker.mixin.client;
 
-import games.swip.SkulkerBox.ShulkerBoxCounter;
-import games.swip.SkulkerBox.SkulkerBoxClient;
+import games.swip.ShulkerStalker.ShulkerStalkerClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import net.minecraft.core.BlockPos;
@@ -23,7 +22,7 @@ public class BlockMineMixin {
 		BlockState state = mc.level.getBlockState(pos);
 
 		if (state.getBlock() instanceof ShulkerBoxBlock) {
-			SkulkerBoxClient.counterManager.registerCounter(pos);
+			ShulkerStalkerClient.counterManager.registerCounter(pos);
 		}
 	}
 }

@@ -1,6 +1,6 @@
-package games.swip.SkulkerBox.mixin.client;
+package games.swip.ShulkerStalker.mixin.client;
 
-import games.swip.SkulkerBox.SkulkerBoxClient;
+import games.swip.ShulkerStalker.ShulkerStalkerClient;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.world.entity.EntityType;
@@ -15,7 +15,7 @@ public class ItemSpawnMixin {
 	@Inject(method = "handleAddEntity", at = @At("TAIL"))
 	private void onEntitySpawn(ClientboundAddEntityPacket packet, CallbackInfo ci) {
 		if (packet.getType() == EntityType.ITEM) {
-			SkulkerBoxClient.counterManager.assignEntityId(packet.getId());
+			ShulkerStalkerClient.counterManager.assignEntityId(packet.getId());
 		}
 	}
 }

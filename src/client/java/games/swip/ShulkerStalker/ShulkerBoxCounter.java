@@ -1,4 +1,4 @@
-package games.swip.SkulkerBox;
+package games.swip.ShulkerStalker;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;

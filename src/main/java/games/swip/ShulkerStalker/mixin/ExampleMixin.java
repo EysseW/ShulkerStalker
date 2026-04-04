@@ -1,4 +1,4 @@
-package games.swip.SkulkerBox.mixin;
+package games.swip.ShulkerStalker.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

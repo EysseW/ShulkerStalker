@@ -1,6 +1,6 @@
-package games.swip.SkulkerBox.mixin.client;
+package games.swip.ShulkerStalker.mixin.client;
 
-import games.swip.SkulkerBox.SkulkerBoxClient;
+import games.swip.ShulkerStalker.ShulkerStalkerClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.network.protocol.game.ClientboundTakeItemEntityPacket;
@@ -26,7 +26,7 @@ public class PickupMixin {
 
 			if (stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof ShulkerBoxBlock) {
 				// It's a shulker! Kill the timer.
-				SkulkerBoxClient.counterManager.handlePickup(packet.getItemId());
+				ShulkerStalkerClient.counterManager.handlePickup(packet.getItemId());
 			}
 		}
 	}
