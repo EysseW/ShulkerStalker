@@ -1,4 +1,4 @@
-package com.example;
+package com.skulkerbox;
 
 import net.fabricmc.api.ModInitializer;
 
