@@ -6,6 +6,7 @@ import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.level.GameType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +33,8 @@ public class ShulkerBoxCounter {
 	public boolean shouldDie(Minecraft client) {
 		if (ticksActive >= threshold) {
 			// NOTIFY PLAYER
-			if (client.player != null && Config.enabled) {
+			if (client.player != null && Config.enabled && client.player.gameMode() != GameType.CREATIVE) {
+
 				client.player.sendOverlayMessage(Component.literal("§cWarning: Shulker box not picked up!"));
 				if (Config.warning_sound) {
 					client.player.playSound(ShulkerStalkerClient.SHULKER_WARNING_EVENT);
