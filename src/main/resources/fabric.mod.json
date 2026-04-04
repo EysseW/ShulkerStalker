@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"games.swip.SkulkerBox.SkulkerBox"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"games.swip.SkulkerBox.SkulkerBoxClient"
 		]
 	},
 	"mixins": [

@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.skulkerbox.mixin.client",
+	"package": "games.swip.SkulkerBox.mixin.client",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"ExampleClientMixin"
+		"SkulkerBoxMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

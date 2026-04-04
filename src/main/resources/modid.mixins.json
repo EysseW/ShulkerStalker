@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "com.skulkerbox.mixin",
+	"package": "games.swip.SkulkerBox.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
 		"ExampleMixin"
