@@ -3,7 +3,8 @@
 	"package": "games.swip.SkulkerBox.mixin.client",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"BlockMineMixin"
+		"BlockMineMixin",
+		"PickupMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

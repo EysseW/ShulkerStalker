@@ -1,10 +1,12 @@
 package games.swip.SkulkerBox;
 
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CooldownManager {
+	private static final Logger log = LoggerFactory.getLogger(CooldownManager.class);
 	private int ticksActive = 0;
 	private boolean isWaiting = false;
 	private final int THRESHOLD = 60; // 3 seconds
@@ -30,6 +32,7 @@ public class CooldownManager {
 				client.player.sendSystemMessage(
 				 Component.literal("§cWarning: Shulker box not picked up!")
 				);
+				System.out.println("Timer done!");
 			}
 			kill(); // Stop the timer after notifying
 		}

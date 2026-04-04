@@ -18,6 +18,7 @@ public class PickupMixin {
 	@Inject(method = "handleTakeItemEntity", at = @At("HEAD"))
 	public void onPickup(ClientboundTakeItemEntityPacket packet, CallbackInfo ci) {
 		Minecraft mc = Minecraft.getInstance();
+		System.out.println("item pickup");
 
 		// Check if the entity being picked up is an ItemEntity
 		if (mc.level.getEntity(packet.getItemId()) instanceof ItemEntity itemEntity) {
