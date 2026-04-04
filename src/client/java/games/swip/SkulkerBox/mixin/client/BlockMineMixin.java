@@ -1,5 +1,6 @@
 package games.swip.SkulkerBox.mixin.client;
 
+import games.swip.SkulkerBox.ShulkerBoxCounter;
 import games.swip.SkulkerBox.SkulkerBoxClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
@@ -15,13 +16,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class BlockMineMixin {
 	@Inject(at = @At("HEAD"), method = "destroyBlock")
 	private void init(BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+
 		// This code is injected into the start of Minecraft.run()V
 		System.out.println("Local player mined block at: " + pos.toShortString());
 		Minecraft mc = Minecraft.getInstance();
 		BlockState state = mc.level.getBlockState(pos);
 
 		if (state.getBlock() instanceof ShulkerBoxBlock) {
-			SkulkerBoxClient.cooldownManager.start();
+			SkulkerBoxClient.counterManager.registerCounter(pos);
 		}
 	}
 }

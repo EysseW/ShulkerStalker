@@ -1,17 +1,15 @@
 package games.swip.SkulkerBox;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SkulkerBoxClient implements ClientModInitializer {
-	public static final CooldownManager cooldownManager = new CooldownManager();
+	public static final CounterManager counterManager = new CounterManager();
+	private static final Logger log = LoggerFactory.getLogger(SkulkerBoxClient.class);
+
 	@Override
 	public void onInitializeClient() {
-		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
-		ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			if (client.player != null) {
-				cooldownManager.tick(client);
-			}
-		});
+		log.debug("SkulkerBox loaded!");
 	}
 }

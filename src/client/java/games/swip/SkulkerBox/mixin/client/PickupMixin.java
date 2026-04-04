@@ -26,7 +26,7 @@ public class PickupMixin {
 
 			if (stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof ShulkerBoxBlock) {
 				// It's a shulker! Kill the timer.
-				SkulkerBoxClient.cooldownManager.kill();
+				SkulkerBoxClient.counterManager.handlePickup(packet.getItemId());
 			}
 		}
 	}
