@@ -1,5 +1,6 @@
 package games.swip.ShulkerStalker;
 
+import games.swip.ShulkerStalker.config.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -9,7 +10,7 @@ import org.slf4j.LoggerFactory;
 public class ShulkerBoxCounter {
 	private static final Logger log = LoggerFactory.getLogger(ShulkerBoxCounter.class);
 	private int ticksActive;
-	private final int THRESHOLD = 60;
+	private final int threshold;
 	private int trackedEntityId = -1;
 	private final BlockPos minedPos;
 	private CounterState state;
@@ -18,6 +19,7 @@ public class ShulkerBoxCounter {
 		this.minedPos = pos;
 		this.ticksActive = 0;
 		this.state = CounterState.WAITING;
+		this.threshold = Config.timer;
 	}
 
 	public void setId(int id) {
@@ -26,12 +28,10 @@ public class ShulkerBoxCounter {
 	}
 
 	public boolean shouldDie(Minecraft client) {
-		if (ticksActive >= THRESHOLD) {
+		if (ticksActive >= threshold) {
 			// NOTIFY PLAYER
-			if (client.player != null) {
-				client.player.sendOverlayMessage(
-				 Component.literal("§cWarning: Shulker box not picked up!")
-				);
+			if (client.player != null && Config.enabled) {
+				client.player.sendOverlayMessage(Component.literal("§cWarning: Shulker box not picked up!"));
 				System.out.println("Timer done!");
 			}
 			return true;

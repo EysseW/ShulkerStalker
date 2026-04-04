@@ -1,5 +1,7 @@
 package games.swip.ShulkerStalker;
 
+import eu.midnightdust.lib.config.MidnightConfig;
+import games.swip.ShulkerStalker.config.Config;
 import net.fabricmc.api.ClientModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +12,7 @@ public class ShulkerStalkerClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+		MidnightConfig.init("modid", Config.class);
 		log.debug("SkulkerBox loaded!");
 	}
 }
