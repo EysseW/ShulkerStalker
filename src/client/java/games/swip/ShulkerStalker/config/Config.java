@@ -10,4 +10,6 @@ public class Config extends MidnightConfig {
 	@Entry(category = GENERAL, name = "Apply glowing to dropped item") public static boolean apply_glowing = true;
 	@Entry(category = GENERAL, name = "Enable warning sound") public static boolean warning_sound = true;
 	@Entry(category = GENERAL, name = "Flash warning message") public static boolean flash_message = false;
+	@Entry(category = GENERAL, name = "Message") public static String message = "Warning: Shulker box not picked up!";
+	@Entry(category = GENERAL, width = 7, min = 7, isColor = true, name = "Message color") public static String message_color = "#cf2323";
 }
