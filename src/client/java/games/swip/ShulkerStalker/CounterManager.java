@@ -19,7 +19,9 @@ public class CounterManager {
 	}
 
 	public void tick(Minecraft client) {
-		counters.removeIf(counter -> counter.shouldDie(client));
+		for (ShulkerBoxCounter counter : counters) {
+			counter.tick(client);
+		}
 	}
 
 	public void registerCounter(BlockPos pos) {
@@ -34,5 +36,12 @@ public class CounterManager {
 
 	public void handlePickup(int id) {
 		counters.removeIf(counter -> counter.getId() == id);
+	}
+
+	public boolean isTarget(int id) {
+		for (ShulkerBoxCounter counter : counters) {
+			if (counter.isGlowing() && counter.getId() == id) return true;
+		}
+		return false;
 	}
 }

@@ -5,7 +5,8 @@ import eu.midnightdust.lib.config.MidnightConfig;
 public class Config extends MidnightConfig {
 	public static final String GENERAL = "General";
 	@Entry(category = GENERAL, name= "Enabled") public static boolean enabled = true;
-	@Entry(category = GENERAL, name = "Time to pickup shulkerbox") public static int timer = 100;
+	@Entry(category = GENERAL, name = "Time to pickup shulkerbox") public static int initial_timer = 100;
+	@Entry(category = GENERAL, name = "Apply glowing to dropped item") public static boolean apply_glowing = true;
 	@Entry(category = GENERAL, name = "Enable warning sound") public static boolean warning_sound = true;
-	@Entry(category = GENERAL, name = "Keep nagging") public static boolean keep_nagging = false;
+	@Entry(category = GENERAL, name = "Remind timer") public static int remind_timer = 20;
 }

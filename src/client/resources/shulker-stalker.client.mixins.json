@@ -5,7 +5,8 @@
 	"client": [
 		"BlockMineMixin",
 		"PickupMixin",
-		"ItemSpawnMixin"
+		"ItemSpawnMixin",
+		"ForceEntityGlowingMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
