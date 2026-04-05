@@ -9,4 +9,5 @@ public class Config extends MidnightConfig {
 	@Entry(category = GENERAL, name = "Apply glowing to dropped item") public static boolean apply_glowing = true;
 	@Entry(category = GENERAL, name = "Enable warning sound") public static boolean warning_sound = true;
 	@Entry(category = GENERAL, name = "Remind timer") public static int remind_timer = 20;
+	@Entry(category = GENERAL, name = "Flash message") public static boolean flash_mesage = false;
 }

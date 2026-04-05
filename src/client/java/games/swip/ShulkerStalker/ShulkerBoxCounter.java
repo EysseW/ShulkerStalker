@@ -55,7 +55,11 @@ public class ShulkerBoxCounter {
 	}
 
 	private void notifyPlayer(Minecraft client) {
-		client.player.sendOverlayMessage(Component.literal("§cWarning: Shulker box not picked up!"));
+		if (Config.flash_mesage && ticksActive % 4 == 0) {
+			client.player.sendOverlayMessage(Component.literal(""));
+		} else {
+			client.player.sendOverlayMessage(Component.literal("§cWarning: Shulker box not picked up!"));
+		}
 		if (Config.warning_sound) {
 			client.player.playSound(ShulkerStalkerClient.SHULKER_WARNING_EVENT);
 		}
