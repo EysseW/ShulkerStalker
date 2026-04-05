@@ -40,7 +40,7 @@ public class ShulkerBoxCounter {
 					client.player.playSound(ShulkerStalkerClient.SHULKER_WARNING_EVENT);
 				}
 			}
-			return true;
+			if (!Config.keep_nagging) return true;
 		}
 		ticksActive++;
 		return false;

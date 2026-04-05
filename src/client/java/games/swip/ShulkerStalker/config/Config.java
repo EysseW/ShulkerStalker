@@ -7,4 +7,5 @@ public class Config extends MidnightConfig {
 	@Entry(category = GENERAL, name= "Enabled") public static boolean enabled = true;
 	@Entry(category = GENERAL, name = "Time to pickup shulkerbox") public static int timer = 100;
 	@Entry(category = GENERAL, name = "Enable warning sound") public static boolean warning_sound = true;
+	@Entry(category = GENERAL, name = "Keep nagging") public static boolean keep_nagging = false;
 }
